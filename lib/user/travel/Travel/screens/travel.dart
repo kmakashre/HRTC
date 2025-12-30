@@ -109,7 +109,7 @@ class _TravelScreenState extends ConsumerState<TravelScreen>
                               ),
                             ),
                             Text(
-                              "Cu rrent Location",
+                              "Current Location",
                               style: AppSizes.bodySmall.copyWith(
                                 color: Colors.white.withOpacity(0.9),
                                 fontSize: AppSizes.bodySmallSize * 0.9,

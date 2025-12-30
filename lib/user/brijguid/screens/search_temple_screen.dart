@@ -26,8 +26,8 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final state = ref.watch(brajDarshanProvider);
-    final filteredTemples = _filterTemples(state.temples);
+    // final state = ref.watch(brajDarshanProvider);
+    // final filteredTemples = _filterTemples(state.temples);
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -58,37 +58,37 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
       body: Column(
         children: [
           _buildSearchSection(),
-          Expanded(
-            child:
-                filteredTemples.isEmpty
-                    ? _buildNoResults()
-                    : ListView.builder(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: AppSizes.paddingMedium,
-                        vertical: AppSizes.paddingSmall,
-                      ),
-                      itemCount: filteredTemples.length,
-                      itemBuilder: (context, index) {
-                        final temple = filteredTemples[index];
-                        return Padding(
-                          padding: EdgeInsets.only(
-                            bottom: AppSizes.paddingMedium,
-                          ),
-                          child: TempleCard(
-                            temple: temple,
-                            isFavorite: state.favoriteTemples.contains(
-                              temple.id,
-                            ),
-                            onFavoriteToggle: () {
-                              ref
-                                  .read(brajDarshanProvider.notifier)
-                                  .toggleFavorite(temple.id);
-                            },
-                          ),
-                        );
-                      },
-                    ),
-          ),
+          // Expanded(
+          //   child:
+          //       filteredTemples.isEmpty
+          //           ? _buildNoResults()
+          //           : ListView.builder(
+          //             padding: EdgeInsets.symmetric(
+          //               horizontal: AppSizes.paddingMedium,
+          //               vertical: AppSizes.paddingSmall,
+          //             ),
+          //             itemCount: filteredTemples.length,
+          //             itemBuilder: (context, index) {
+          //               final temple = filteredTemples[index];
+          //               return Padding(
+          //                 padding: EdgeInsets.only(
+          //                   bottom: AppSizes.paddingMedium,
+          //                 ),
+          //                 child: TempleCard(
+          //                   temple: temple,
+          //                   isFavorite: state.favoriteTemples.contains(
+          //                     temple.id,
+          //                   ),
+          //                   onFavoriteToggle: () {
+          //                     ref
+          //                         .read(brajDarshanProvider.notifier)
+          //                         .toggleFavorite(temple.id);
+          //                   },
+          //                 ),
+          //               );
+          //             },
+          //           ),
+          // ),
         ],
       ),
     );

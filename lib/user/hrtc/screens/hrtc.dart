@@ -193,12 +193,12 @@ class _HRTCScreenState extends ConsumerState<HRTCScreen>
                             screenHeight,
                           ),
                           _buildTopHotels(screenWidth, screenHeight),
-                          _buildSectionHeader(
-                            'Top Restaurants',
-                            'View All',
-                            screenWidth,
-                            screenHeight,
-                          ),
+                          // _buildSectionHeader(
+                          //   'Top Restaurants',
+                          //   'View All',
+                          //   screenWidth,
+                          //   screenHeight,
+                          // ),
                           _buildTopRestaurants(screenWidth, screenHeight),
                           _buildSectionHeader(
                             'Exclusive Deals',
@@ -956,7 +956,7 @@ class _HRTCScreenState extends ConsumerState<HRTCScreen>
                               children: [
                                 Container(
                                   padding: EdgeInsets.symmetric(
-                                    horizontal: screenWidth * 0.02,
+                                    horizontal: screenWidth * 0.0015,
                                     vertical: screenHeight * 0.005,
                                   ),
                                   decoration: BoxDecoration(

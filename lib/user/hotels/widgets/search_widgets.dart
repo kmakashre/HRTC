@@ -8,8 +8,14 @@ import 'package:intl/intl.dart';
 
 class SearchWidget extends ConsumerStatefulWidget {
   final Function(HotelSearch) onSearch;
+  final bool onlyCity;
 
-  const SearchWidget({super.key, required this.onSearch});
+  const SearchWidget({
+    super.key,
+    this.onlyCity = false,
+    required this.onSearch,
+  });
+
 
   @override
   ConsumerState<SearchWidget> createState() => _SearchWidgetState();
@@ -207,6 +213,11 @@ class _SearchWidgetState extends ConsumerState<SearchWidget>
   }
 
   void _selectCity(CityData city) {
+    if (widget.onlyCity) {
+      Navigator.pop(context, city.name);
+      return;
+    }
+
     setState(() {
       _selectedCity = city.name;
       _cityController.text = city.name;
@@ -214,6 +225,8 @@ class _SearchWidgetState extends ConsumerState<SearchWidget>
     _cityFocusNode.unfocus();
     _hideSuggestions();
   }
+
+
 
   @override
   Widget build(BuildContext context) {

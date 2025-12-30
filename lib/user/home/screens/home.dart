@@ -8,7 +8,13 @@ import 'package:hrtc/user/cabs/screens/cabs.dart';
 import 'package:hrtc/user/home/provider/home_provider.dart';
 import 'package:hrtc/user/hotels/screens/hotels.dart';
 import 'package:hrtc/user/hrtc/screens/hrtc.dart';
+import 'package:hrtc/user/restaurents/screens/restaurent.dart';
+import 'package:hrtc/user/travel/Bus/screens/bus_booking.dart';
 import 'package:hrtc/user/travel/Travel/screens/travel.dart';
+
+import '../../travel/Bus/screens/bus_form_screen.dart';
+import '../../travel/Bus/screens/bus_screen.dart';
+
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -33,8 +39,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     _screens = [
       const HRTCScreen(),
       const HotelsScreen(),
+      const BusFormScreen(), // bus
       const TravelScreen(),
-      const BrajDarshanScreen(),
+
+      // const CabBookingScreen(),
+      // const BrajDarshanScreen(),
     ];
 
     // Listen to tab changes with debouncing

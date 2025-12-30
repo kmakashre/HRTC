@@ -12,6 +12,7 @@ import '../user/hotels/screens/searched_hotels.dart';
 import '../user/hotels/screens/room_selection.dart';
 import '../user/hotels/screens/booking_confirmation.dart';
 import '../user/restaurents/screens/restaurent.dart';
+import '../user/travel/Bus/screens/bus_screen.dart';
 import '../user/travel/Travel/screens/travel.dart';
 import '../user/cabs/screens/cabs.dart';
 import '../user/brijguid/screens/brajdarshan.dart';
@@ -71,9 +72,9 @@ final GoRouter router = GoRouter(
       builder: (context, state) => const BookingConfirmationScreen(),
     ),
     GoRoute(
-      path: '/restaurants',
-      name: 'restaurants',
-      builder: (context, state) => const RestaurantsScreen(),
+      path: '/Bus',
+      name: 'Bus',
+      builder: (context, state) => const BusSearchScreen(),
     ),
     GoRoute(
       path: '/travel',
@@ -85,10 +86,10 @@ final GoRouter router = GoRouter(
       name: 'cabs',
       builder: (context, state) => const CabBookingScreen(),
     ),
-    GoRoute(
-      path: '/bridgeguide',
-      name: 'bridgeguide',
-      builder: (context, state) => const BrajDarshanScreen(),
-    ),
+    // GoRoute(
+    //   path: '/bridgeguide',
+    //   name: 'bridgeguide',
+    //   builder: (context, state) => const BrajDarshanScreen(),
+    // ),
   ],
 );

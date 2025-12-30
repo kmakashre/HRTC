@@ -6,10 +6,10 @@ import 'package:hrtc/core/utils/colors.dart';
 const List<String> tabNames = [
   'HRTC',
   'Hotels',
-  'Restaurants',
-  'Travel',
-  'Cabs',
-  'Braj Darshan',
+  'Bus',
+  'Flight',
+  // 'Cabs',
+  // 'Braj Darshan',
 ];
 
 // Bottom navigation items
@@ -26,18 +26,18 @@ const Map<int, Color> tabAccentColors = {
   1: AppColors.hotelsAccent, // Hotels
   2: AppColors.restaurantsAccent, // Restaurants
   3: AppColors.travelAccent, // Travel
-  4: AppColors.CabsAccent, // Cabs
-  5: AppColors.servicesAccent, // BridgeGuide
+  // 4: AppColors.CabsAccent, // Cabs
+  // 5: AppColors.servicesAccent, // BridgeGuide
 };
 
 // Tab icons mapping
 const Map<int, IconData> tabIcons = {
   0: Icons.home_outlined, // HRTC
   1: Icons.hotel_outlined, // Hotels
-  2: Icons.restaurant_outlined, // Restaurants
+  2: Icons.bus_alert_outlined, // Restaurants
   3: Icons.flight_outlined, // Travel
-  4: Icons.directions_car_outlined, // Cabs
-  5: Icons.map_outlined, // BridgeGuide
+  // 4: Icons.directions_car_outlined, // Cabs
+  // 5: Icons.map_outlined, // BridgeGuide
 };
 
 // Home State Model

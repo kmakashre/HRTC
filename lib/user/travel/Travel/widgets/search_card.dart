@@ -31,25 +31,20 @@ class SearchCard extends ConsumerWidget {
       ),
       child: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                height: AppSizes.tabBarHeight + 10,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  physics: const BouncingScrollPhysics(),
-                  shrinkWrap: true,
-                  padding: AppSizes.paddingHorizontalSmall,
-                  itemCount: 2,
-                  itemBuilder: (context, index) {
-                    return ServiceTab(index: index);
-                  },
-                ),
-              ),
-            ],
+          SizedBox(
+            height: AppSizes.tabBarHeight,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              physics: const BouncingScrollPhysics(),
+              padding: EdgeInsets.zero,
+              itemCount: 2,
+              itemBuilder: (context, index) {
+                return ServiceTab();
+              },
+            ),
           ),
-          SizedBox(height: AppSizes.verticalSpaceMedium),
+
+          SizedBox(height: AppSizes.paddingSmall),
 
           // Flight-specific UI
           if (travelState.tabIndex == 0) ...[

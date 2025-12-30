@@ -32,7 +32,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
 
   final List<OnboardingModel> _onboardingPages = [
     OnboardingModel(
-      title: "Welcome to HRTC",
+      title: "Welcome to Yatra Buddy",
       description:
           "Explore flight services, hotels, restaurants, and bridge guides with ease",
       imagePath:
@@ -46,13 +46,13 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
           "https://media.istockphoto.com/id/514102692/photo/udaipur-city-palace-in-rajasthan-state-of-india.jpg?s=612x612&w=0&k=20&c=bYRDPOuf6nFgghl6VAnCn__22SFyu_atC_fiSCzVNtY=",
       gradientColors: AppColors.hotelsGradient,
     ),
-    OnboardingModel(
-      title: "Restaurants",
-      description: "Discover the best dining experiences near you",
-      imagePath:
-          "https://media.istockphoto.com/id/464597982/photo/indian-thali-indian-food.jpg?s=612x612&w=0&k=20&c=DtzloV4_NnVJNpG96CpM2_DSYb97imp0S959DFzcM9A=",
-      gradientColors: AppColors.restaurantsGradient,
-    ),
+    // OnboardingModel(
+    //   title: "Restaurants",
+    //   description: "Discover the best dining experiences near you",
+    //   imagePath:
+    //       "https://media.istockphoto.com/id/464597982/photo/indian-thali-indian-food.jpg?s=612x612&w=0&k=20&c=DtzloV4_NnVJNpG96CpM2_DSYb97imp0S959DFzcM9A=",
+    //   gradientColors: AppColors.restaurantsGradient,
+    // ),
     OnboardingModel(
       title: "Bus Services",
       description: "Book reliable and comfortable bus tickets for your journey",
@@ -60,13 +60,13 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
           "https://media.istockphoto.com/id/1154164634/photo/white-bus-traveling-on-the-asphalt-road-around-line-of-trees-in-rural-landscape-at-sunset.jpg?s=612x612&w=0&k=20&c=e7W4o2ajRuKWIFkrO7Imkg_azl79fOi3sJ7eacDEUNQ=",
       gradientColors: AppColors.travelGradient,
     ),
-    OnboardingModel(
-      title: "Braj Darshan",
-      description: "Get detailed guides for iconic bridges and travel routes",
-      imagePath:
-          "https://media.istockphoto.com/id/482024366/photo/krishna-giridhari.jpg?s=612x612&w=0&k=20&c=_kgG2hJ0ONEcfWg_NYr1b4c0L9xnA-kRFi6NqpYXNkc=",
-      gradientColors: AppColors.servicesGradient,
-    ),
+    // OnboardingModel(
+    //   title: "Braj Darshan",
+    //   description: "Get detailed guides for iconic bridges and travel routes",
+    //   imagePath:
+    //       "https://media.istockphoto.com/id/482024366/photo/krishna-giridhari.jpg?s=612x612&w=0&k=20&c=_kgG2hJ0ONEcfWg_NYr1b4c0L9xnA-kRFi6NqpYXNkc=",
+    //   gradientColors: AppColors.servicesGradient,
+    // ),
   ];
 
   @override

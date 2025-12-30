@@ -98,9 +98,9 @@ class TravelState {
     if (tabIndex == 0) {
       bool hasBasicInfo =
           fromLocation.isNotEmpty &&
-          toLocation.isNotEmpty &&
-          departureDate.isNotEmpty &&
-          adults > 0;
+              toLocation.isNotEmpty &&
+              departureDate.isNotEmpty &&
+              adults > 0;
 
       // For round trip, also need return date
       if (tripType == TripType.roundTrip) {
@@ -253,7 +253,7 @@ class TravelNotifier extends StateNotifier<TravelState> {
       final searchQuery =
           '$searchType: ${state.fromLocation} → ${state.toLocation}';
       final updatedSearches =
-          {searchQuery, ...state.recentSearches}.take(10).toList();
+      {searchQuery, ...state.recentSearches}.take(10).toList();
       state = state.copyWith(recentSearches: updatedSearches);
     }
   }
@@ -264,7 +264,7 @@ class TravelNotifier extends StateNotifier<TravelState> {
 
   void removeRecentSearch(String search) {
     final updatedSearches =
-        state.recentSearches.where((item) => item != search).toList();
+    state.recentSearches.where((item) => item != search).toList();
     state = state.copyWith(recentSearches: updatedSearches);
   }
 
@@ -323,9 +323,9 @@ class TravelNotifier extends StateNotifier<TravelState> {
   // Utility methods
   void toggleTripType() {
     final newTripType =
-        state.tripType == TripType.oneWay
-            ? TripType.roundTrip
-            : TripType.oneWay;
+    state.tripType == TripType.oneWay
+        ? TripType.roundTrip
+        : TripType.oneWay;
     setTripType(newTripType);
   }
 
@@ -396,7 +396,7 @@ class TravelNotifier extends StateNotifier<TravelState> {
 }
 
 final travelProvider = StateNotifierProvider<TravelNotifier, TravelState>(
-  (ref) => TravelNotifier(),
+      (ref) => TravelNotifier(),
 );
 
 // Additional providers for specific use cases

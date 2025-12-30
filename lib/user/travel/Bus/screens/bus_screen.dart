@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'package:hrtc/core/utils/colors.dart';
 import 'package:hrtc/core/utils/sizes.dart';
 import 'package:hrtc/user/travel/Bus/provider/bus_provider.dart';
 import 'package:hrtc/user/travel/Bus/widgets/book_card.dart';
@@ -72,9 +71,9 @@ class BusSearchScreen extends ConsumerWidget {
           // Bus list
           Expanded(
             child:
-                buses.isEmpty
-                    ? _buildEmptyState()
-                    : AnimationLimiter(
+                // buses.isEmpty
+                //     ? _buildEmptyState()
+                     AnimationLimiter(
                       child: ListView.builder(
                         padding: const EdgeInsets.all(16),
                         itemCount: buses.length,
@@ -191,34 +190,34 @@ class BusSearchScreen extends ConsumerWidget {
     );
   }
 
-  Widget _buildEmptyState() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            Icons.directions_bus_outlined,
-            size: 80,
-            color: Colors.grey.shade400,
-          ),
-          const SizedBox(height: 16),
-          Text(
-            'No buses found',
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
-              color: Colors.grey.shade600,
-            ),
-          ),
-          const SizedBox(height: 8),
-          Text(
-            'Try adjusting your filters',
-            style: TextStyle(fontSize: 14, color: Colors.grey.shade500),
-          ),
-        ],
-      ),
-    );
-  }
+  // Widget _buildEmptyState() {
+  //   return Center(
+  //     child: Column(
+  //       mainAxisAlignment: MainAxisAlignment.center,
+  //       children: [
+  //         Icon(
+  //           Icons.directions_bus_outlined,
+  //           size: 80,
+  //           color: Colors.grey.shade400,
+  //         ),
+  //         const SizedBox(height: 16),
+  //         Text(
+  //           'No buses found',
+  //           style: TextStyle(
+  //             fontSize: 18,
+  //             fontWeight: FontWeight.w600,
+  //             color: Colors.grey.shade600,
+  //           ),
+  //         ),
+  //         const SizedBox(height: 8),
+  //         Text(
+  //           'Try adjusting your filters',
+  //           style: TextStyle(fontSize: 14, color: Colors.grey.shade500),
+  //         ),
+  //       ],
+  //     ),
+  //   );
+  // }
 
   void _showFilterBottomSheet(BuildContext context, WidgetRef ref) {
     showModalBottomSheet(

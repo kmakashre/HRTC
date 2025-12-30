@@ -4,6 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hrtc/Routes/app_routes.dart';
 import 'package:hrtc/core/utils/colors.dart';
 
+import 'core/utils/sizes.dart';
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([
@@ -32,6 +34,10 @@ class MyApp extends ConsumerWidget {
     return MaterialApp.router(
       title: 'HRTC',
       debugShowCheckedModeBanner: false,
+      builder: (context, child) {
+        AppSizes.init(context);
+        return child!;
+      },
       theme: ThemeData(
         colorScheme: const ColorScheme.light(
           primary: AppColors.primary,
